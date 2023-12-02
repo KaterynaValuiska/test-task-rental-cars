@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import CarList from '../CarList';
+import Loader from 'components/Loader';
 
 const Catalog = () => {
   const { isLoading } = useSelector(state => state.cars);
@@ -7,7 +8,7 @@ const Catalog = () => {
   return (
     <>
       <h2>Catalog of cars</h2>
-      {isLoading && <div>loader</div>}
+      {isLoading && <Loader />}
 
       <CarList />
     </>

@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchCars } from '../redux/operations';
+import Loader from 'components/Loader';
 const Home = () => {
   const dispatch = useDispatch();
   const { items, isLoading } = useSelector(state => state.cars);
@@ -11,7 +12,7 @@ const Home = () => {
   }, [dispatch]);
   return (
     <>
-      {isLoading && <div>loader</div>}
+      {isLoading && <Loader />}
       <div>Home page</div>
       <div>
         <p>The number of available cars in the database</p>

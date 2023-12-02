@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 export const Button = styled.button`
   display: block;
   padding: 12px 99px;
@@ -53,7 +53,7 @@ export const InfoCar = styled.p`
   padding: 0;
   position: relative;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 1px;
     height: 16px;
@@ -82,4 +82,22 @@ export const Favorite = styled.div`
   position: absolute;
   right: 5px;
   top: 5px;
+`;
+
+export const LoadMore = styled.span`
+  display: block;
+  text-align: center;
+  background-color: rgba(52, 112, 255, 1);
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  &:hover,
+  &:focus {
+    background-color: rgba(11, 68, 205, 1);
+  }
 `;
