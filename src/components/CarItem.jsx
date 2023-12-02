@@ -14,7 +14,7 @@ import {
 import heart from './heart.svg';
 import heartBlue from './heartBlue.svg';
 import car from './car.svg';
-import { FaCarSide } from 'react-icons/fa';
+
 import InformAboutCar from './InformAboutCar';
 
 const CarItem = item => {

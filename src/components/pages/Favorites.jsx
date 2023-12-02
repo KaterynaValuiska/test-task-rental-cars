@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import CarItem from '../CarItem';
 
 import { WrapperCars } from '../CarItem.styled';
-import { useState } from 'react';
 
 const Favorites = () => {
   const { orders } = useSelector(state => state.cars);
