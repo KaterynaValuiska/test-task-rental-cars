@@ -14,7 +14,7 @@ export const fetchCars = createAsyncThunk(
     }
   }
 );
-export const addTask = createAction('cars/addOrders');
+// export const addTask = createAction('cars/addOrders');
 // export const addOrders = createAsyncThunk(
 //   "cars/addOrders",
 //   async (item, thunkAPI) => {
