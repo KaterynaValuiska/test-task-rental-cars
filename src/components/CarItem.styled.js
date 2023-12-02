@@ -29,6 +29,7 @@ export const Imeg = styled.img`
   width: 274px;
   border-radius: 14px;
   object-fit: cover;
+  background-color: rgba(18, 20, 23, 0.5);
 `;
 export const NameCar = styled.p`
   font-size: 16px;
