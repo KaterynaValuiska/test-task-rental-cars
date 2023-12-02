@@ -78,7 +78,7 @@ const CarList = () => {
               )
             )}
       </WrapperCars>
-      {showMore >= items.length ? null : (
+      {showMore >= getFilterCars().length ? null : (
         <LoadMore onClick={loadMore}>Load more</LoadMore>
       )}
     </>

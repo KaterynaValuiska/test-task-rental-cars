@@ -87,17 +87,16 @@ export const Favorite = styled.div`
 export const LoadMore = styled.span`
   display: block;
   text-align: center;
-  background-color: rgba(52, 112, 255, 1);
-  border-radius: 12px;
+
   cursor: pointer;
-  border: none;
-  color: rgba(255, 255, 255, 1);
+
+  color: rgba(52, 112, 255, 1);
   width: 150px;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+
   &:hover,
   &:focus {
-    background-color: rgba(11, 68, 205, 1);
+    color: rgba(11, 68, 205, 1);
   }
 `;

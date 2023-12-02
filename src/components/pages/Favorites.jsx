@@ -20,7 +20,8 @@ const Favorites = () => {
   const activeHeart = () => {};
   return (
     <>
-      <h2>Selected cars</h2>
+      {favoritesCarAll.length === 0 && <h2>There are no favorite cars</h2>}
+
       <WrapperCars>
         {favoritesCarAll.length > 0 &&
           favoritesCarAll.map(
