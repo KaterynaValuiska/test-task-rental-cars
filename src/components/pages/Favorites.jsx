@@ -3,14 +3,16 @@ import { useSelector } from 'react-redux';
 import CarItem from '../CarItem';
 
 import { WrapperCars } from '../CarItem.styled';
+import { useState } from 'react';
 
 const Favorites = () => {
   const { orders } = useSelector(state => state.cars);
+  // const [localStor, setLocalStor] = useState()
   let favoritesCar = orders.flat();
   console.log(favoritesCar);
 
-  const carsStringify = JSON.stringify(favoritesCar);
-  localStorage.setItem('select-car', carsStringify);
+  // const carsStringify = JSON.stringify(favoritesCar);
+  // localStorage.setItem('select-car', carsStringify);
 
   const carsLocal = JSON.parse(localStorage.getItem('select-car'));
   console.log('selectCarsLocal', carsLocal);

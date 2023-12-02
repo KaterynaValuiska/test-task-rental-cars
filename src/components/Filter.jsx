@@ -12,7 +12,7 @@ import {
 const Filter = () => {
   const dispatch = useDispatch();
   return (
-    <>
+    <div>
       <TextCarBrand>Car brand</TextCarBrand>
       <Formik
         initialValues={{
@@ -32,7 +32,7 @@ const Filter = () => {
           <Button type="submit">Submit</Button>
         </FormStyle>
       </Formik>
-    </>
+    </div>
   );
 };
 export default Filter;

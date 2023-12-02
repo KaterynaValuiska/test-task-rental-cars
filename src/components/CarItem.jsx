@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Modal } from "./Modal";
+import { useEffect, useState } from 'react';
+import { Modal } from './Modal';
 import {
   Button,
   Wrapper,
@@ -10,12 +10,14 @@ import {
   InfoCar,
   Favorite,
   WrapperInfo,
-} from "./CarItem.styled";
-import heart from "./heart.svg";
-import heartBlue from "./heartBlue.svg";
-import InformAboutCar from "./InformAboutCar";
+} from './CarItem.styled';
+import heart from './heart.svg';
+import heartBlue from './heartBlue.svg';
+import car from './car.svg';
+import { FaCarSide } from 'react-icons/fa';
+import InformAboutCar from './InformAboutCar';
 
-const CarItem = (item) => {
+const CarItem = item => {
   const {
     make,
     rentalPrice,
@@ -39,29 +41,47 @@ const CarItem = (item) => {
 
   const [showModal, setShowModal] = useState(false);
   const [select, setSelect] = useState(false);
-  const addressArray = address.split(" ");
+  const [errImg, setErrImg] = useState(false);
+  const addressArray = address.split(' ');
   const country = addressArray[addressArray.length - 1];
   const city = addressArray[addressArray.length - 2];
-  const cityArray = city.split("");
+  const cityArray = city.split('');
   cityArray.pop();
-  const cityCorr = cityArray.join("");
-  const functionalitiesArray = functionalities.split(" ");
-  const shotFunctional = functionalitiesArray.splice(0, 3).join(" ");
+  const cityCorr = cityArray.join('');
+  const functionalitiesArray = functionalities.split(' ');
+  const shotFunctional = functionalitiesArray.splice(0, 3).join(' ');
   const toggleModal = () => {
     setShowModal(!showModal);
   };
 
+  useEffect(() => {
+    setSelect(JSON.parse(window.localStorage.getItem('heart')));
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('heart', select);
+  }, [select]);
+
   const addToFavorite = () => {
     onAdd(item);
-    setSelect(true);
+    setSelect(!select);
   };
+  function myFunction() {
+    setErrImg(true);
+  }
   return (
     <>
       <Wrapper>
         <Favorite onClick={addToFavorite}>
           <img src={select ? heartBlue : heart} alt="svg" />
         </Favorite>
-        <Imeg src={img} alt={make} />
+        <Imeg
+          src={!errImg ? img : car}
+          alt={make}
+          onError={() => {
+            myFunction();
+          }}
+        />
         <WrapperName>
           <NameCar>
             {make}

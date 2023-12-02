@@ -74,8 +74,21 @@ export const WrapperCars = styled.div`
   display: flex;
   gap: 50px 29px;
   flex-wrap: wrap;
-  width: 1184px;
+  width: 300px;
   margin-top: 50px;
+  @media screen and (min-width: 768px) {
+    width: 600px;
+    gap: 16px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1184px;
+  }
+`;
+export const WrapperCatalog = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Favorite = styled.div`

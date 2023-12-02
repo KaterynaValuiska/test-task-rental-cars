@@ -1,10 +1,11 @@
-import { Outlet } from "react-router-dom";
-import { Suspense } from "react";
-import { LayoutNav, LinkNav, Main } from "./Layout.styled";
+import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
+import { LayoutNav, LinkNav, Main } from './Layout.styled';
+import { WrapperCatalog } from './CarItem.styled';
 
 export const Layout = () => {
   return (
-    <div>
+    <WrapperCatalog>
       <LayoutNav>
         <LinkNav to="/">Home</LinkNav>
 
@@ -16,7 +17,7 @@ export const Layout = () => {
           <Outlet />
         </Suspense>
       </Main>
-    </div>
+    </WrapperCatalog>
   );
 };
 
