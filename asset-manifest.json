@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/test-task-rental-cars/static/css/main.7acaea2f.css",
-    "main.js": "/test-task-rental-cars/static/js/main.7e26fd6b.js",
+    "main.js": "/test-task-rental-cars/static/js/main.fc5ac22b.js",
     "index.html": "/test-task-rental-cars/index.html",
     "static/media/heart.svg": "/test-task-rental-cars/static/media/heart.ac060e771360fcc26ebb0c86173c8396.svg",
     "static/media/heartBlue.svg": "/test-task-rental-cars/static/media/heartBlue.b825442535eb48fa4c59b66934982764.svg",
     "static/media/x.svg": "/test-task-rental-cars/static/media/x.f3cbdd58dc25ca7cbb3d242106b56fb9.svg",
     "main.7acaea2f.css.map": "/test-task-rental-cars/static/css/main.7acaea2f.css.map",
-    "main.7e26fd6b.js.map": "/test-task-rental-cars/static/js/main.7e26fd6b.js.map"
+    "main.fc5ac22b.js.map": "/test-task-rental-cars/static/js/main.fc5ac22b.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.7e26fd6b.js"
+    "static/js/main.fc5ac22b.js"
   ]
 }
