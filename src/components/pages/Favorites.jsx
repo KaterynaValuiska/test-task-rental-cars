@@ -1,31 +1,31 @@
 import { nanoid } from 'nanoid';
-import { useSelector } from 'react-redux';
+
 import CarItem from '../CarItem';
 
 import { WrapperCars } from '../CarItem.styled';
 
 const Favorites = () => {
-  const { orders } = useSelector(state => state.cars);
-  // const [localStor, setLocalStor] = useState()
-  let favoritesCar = orders.flat();
-  console.log(favoritesCar);
+  let carsLocal;
 
-  // const carsStringify = JSON.stringify(favoritesCar);
-  // localStorage.setItem('select-car', carsStringify);
+  carsLocal = JSON.parse(localStorage.getItem('select-car'));
 
-  const carsLocal = JSON.parse(localStorage.getItem('select-car'));
-  console.log('selectCarsLocal', carsLocal);
-
-  const favoritesCarAll = [...carsLocal];
+  const favor = () => {
+    if (carsLocal === null) {
+      const favoritesCarAll = [];
+      return favoritesCarAll;
+    }
+    const favoritesCarAll = [...carsLocal];
+    return favoritesCarAll;
+  };
 
   const activeHeart = () => {};
   return (
     <>
-      {favoritesCarAll.length === 0 && <h2>There are no favorite cars</h2>}
+      {favor().length === 0 && <h2>There are no favorite cars</h2>}
 
       <WrapperCars>
-        {favoritesCarAll.length > 0 &&
-          favoritesCarAll.map(
+        {favor().length > 0 &&
+          favor().map(
             ({
               make,
               rentalPrice,

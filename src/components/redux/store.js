@@ -1,21 +1,17 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { persistStore } from "redux-persist";
-import { carsSlice } from "./slice";
-
-// const combinedReducers = combineReducers({
-//   cars: carReducer,
-// });
+import { configureStore } from '@reduxjs/toolkit';
+import { carsSlice } from './slice';
+import { persistStore } from 'redux-persist';
 
 export const store = configureStore({
-  // reducer: combinedReducers,
-  // middleware: (getDefaultMiddleware) =>
+  reducer: {
+    cars: carsSlice.reducer,
+  },
+  // middleware: getDefaultMiddleware =>
   //   getDefaultMiddleware({
   //     serializableCheck: {
   //       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
   //     },
   //   }),
-  reducer: {
-    cars: carsSlice.reducer,
-  },
+  // devTools: process.env.NODE_ENV === 'development',
 });
 export const persistor = persistStore(store);
