@@ -7,7 +7,7 @@ export const fetchCars = createAsyncThunk(
   'cars/fetchCars',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('/cars');
+      const response = await axios.get(`/cars`);
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
